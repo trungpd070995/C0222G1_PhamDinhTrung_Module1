@@ -1,0 +1,5 @@
+	START
+	   INPUT Toán, Lý, Hóa
+	    Avg = (Toán + Lý + Hóa) / 3
+	    DISPLAY Avg
+	END
