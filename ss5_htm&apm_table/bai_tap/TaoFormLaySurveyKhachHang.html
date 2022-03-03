@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .test{
+            font-family: sans-serif, Arial;
+            border-collapse: collapse;
+            width: 100%;
+        }
+        .d.h{
+            border: 2px solid #dddddd;
+            padding: 10px;
+        }
+        .r:nth-child(even){
+            background: cadetblue;
+        }
+        .d{
+            text-align: center;
+        }
+        .e{
+            text-align: left;
+        }
+    </style>
+
+</head>
+<body style="background: rgb(175, 219, 224)">
+<form action="TaoFormLaySurvayKhachHang.html" method="post">
+    <h2>Maket Research Survey</h2>
+    <hr>
+    <p>Please take a few moments to complete this santisfaction survey</p>
+    <hr>
+    <label><b>What is your age range?</b></label>
+    <br>
+    <select name="age"><br>
+        <option value="1">18 > 24</option>
+        <option value="2">24 > 34</option>
+        <option value="3">34 > 45</option>
+        <option value="4">45 > 60</option>
+        <option value="5"> 60+ </option>
+    </select><br><br>
+    <hr>
+    <label><b>What is your yearly income range?</b></label>
+    <br>
+    <select name="ranger">
+        <option value="1"> $0 - $25000 </option>
+        <option value="2"> $25000 - $50000 </option>
+        <option value="3"> $50000 - $100000</option>
+        <option value="4"> $100000 +</option>
+    </select><br><br>
+
+    <hr>
+    
+    <label><b>Gender</b></label><br>
+    <input type="radio" name="ranger"> Male <br>
+    <input type="radio" name="ranger"> Female <br>
+
+    <br>
+
+    <label><b>Which of the fllowing producst have your purchased in the last 2 months. Please check all that apply.</b></label><br>
+    <input type="checkbox" name="product"> Product 1 <br>
+    <input type="checkbox" name="product"> Product 2 <br>
+    <input type="checkbox" name="product"> Product 3 <br>
+
+    <label><b>How often would you use our new product?</b></label><br>
+    <input type="radio" value="newprod" name="new"> Daily <br>
+    <input type="radio" value="newprod" name="new"> Weekly <br>
+    <input type="radio" value="newprod" name="new"> Monthly <br>
+    <br>
+    <label><b>What would you pay for the new product</b></label>
+    <table>
+        <tr>
+            <td>$</td>
+            <td> <input type="number" name="dollar"></td>
+            <td>.</td>
+            <td> <input type="number" name="cent"></td>
+        </tr>
+        <tr>
+            <td> Dollar</td>
+            <td></td>
+            <td> Center</td>
+        </tr>
+    </table>
+    <br>
+    <label><b>What features would you like to see in the new product</b></label><br>
+    <textarea cols="70" rows="7"></textarea><br><br>
+    <label>Please rate your level of agreement with the fllowing statement</label>
+    <hr>
+    <table class="test" border="0.5">
+        <tr class="r">
+            <th class="h"></th>
+            <th class="h">Strongly <abbr></abbr> Disagree</th>
+            <th class="h">Disagree</th>
+            <th class="h">Agree</th>
+            <th class="h">Strongly Agree</th>
+        </tr>
+        <tr class="r">
+            <th class="e">Our products are preced fairly</th>
+            <td class="d"><input type="radio" name="price" value="price1"><br>1</td>
+            <td class="d"><input type="radio" name="price" value="price2"><br>2</td>
+            <td class="d"><input type="radio" name="price" value="price3"><br>3</td>
+            <td class="d"><input type="radio" name="price" value="price4"><br>4</td>
+        </tr>
+        <tr class="r">
+            <th class="e">Our products are high quality</th>
+            <td class="d"><input type="radio" name="quality" value="quality1"><br>1</td>
+            <td class="d"><input type="radio" name="quality" value="quality2"><br>2</td>
+            <td class="d"><input type="radio" name="quality" value="quality3"><br>3</td>
+            <td class="d"><input type="radio" name="quality" value="quality4"><br>4</td>
+        </tr>
+        <tr class="r">
+            <th class="e">You would recommend our product to a friend or coworker</th>
+            <td class="d"><input type="radio" name="friend" value="friend1"><br>1</td>
+            <td class="d"><input type="radio" name="friend" value="friend2"><br>2</td>
+            <td class="d"><input type="radio" name="friend" value="friend3"><br>3</td>
+            <td class="d"><input type="radio" name="friend" value="friend4"><br>4</td>
+        </tr>
+    </table>
+    <br>
+    <input type="submit" value="Submit">
+    <hr>
+
+
+
+</form>
+</body>
+</html>
