@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        button{width: 100%;height: 100%}
+        table{width: 400px;height: 200px;margin-left: 33%;margin-top: 20%}
+        input{width: 98%;height: 20px;}
+    </style>
+</head>
+
+<body style="background-color: #598dec">
+<table>
+    <tr>
+        <td colspan="4"><input type="text" style="text-align: right" placeholder="Nhập số để tính toán" id="tong"></td>
+    </tr>
+    <tr>
+        <td><button style="background-color: darkseagreen" onclick="cong('(')">(</button></td>
+        <td><button style="background-color: darkseagreen" onclick="cong(')')">)</button></td>
+        <td><button style="background-color: aquamarine" onclick="cong('%')">%</button></td>
+        <td><button style="background-color: #ca5555" onclick="ac('AC')">AC</button></td>
+    </tr>
+    <tr>
+        <td><button onclick="cong('7')">7</button></td>
+        <td><button onclick="cong('8')">8</button></td>
+        <td><button onclick="cong('9')">9</button></td>
+        <td><button onclick="cong('/')">/</button></td>
+    </tr>
+    <tr>
+        <td><button onclick="cong('4')">4</button></td>
+        <td><button onclick="cong('5')">5</button></td>
+        <td><button onclick="cong('6')">6</button></td>
+        <td><button onclick="cong('*')">X</button></td>
+    </tr>
+    <tr>
+        <td><button onclick="cong('1')">1</button></td>
+        <td><button onclick="cong('2')">2</button></td>
+        <td><button onclick="cong('3')">3</button></td>
+        <td><button onclick="cong('-')">-</button></td>
+    </tr>
+    <tr>
+        <td><button onclick="cong('0')">0</button></td>
+        <td><button onclick="cong('.')">.</button></td>
+        <td><button onclick="bang()">=</button></td>
+        <td><button onclick="cong('+')">+</button></td>
+    </tr>
+</table>
+<script>
+    function cong(value) {
+        document.getElementById('tong').value += value;
+    }
+    function ac() {
+        document.getElementById('tong').value="";
+    }
+    function bang() {
+        document.getElementById('tong').value = eval(document.getElementById('tong').value);
+
+    }
+
+
+</script>
+</body>
+</html>

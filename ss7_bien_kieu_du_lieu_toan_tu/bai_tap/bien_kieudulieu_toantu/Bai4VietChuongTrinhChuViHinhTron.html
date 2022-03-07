@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Chu Vi Hình Tròn</h2>
+<div>
+    <input type="number" id="d" placeholder="nhập chu vi">
+    <input type="button" value="Chu vi" onclick="chuVi()">
+</div>
+<script>
+    function chuVi() {
+        let c = document.getElementById("d").value;
+        let chuViHinhTron = parseInt(c)*2  * Math.PI;
+        alert("chu vi của hình tròn la : " + chuViHinhTron.toFixed(5));
+    }
+</script>
+</body>
+</html>

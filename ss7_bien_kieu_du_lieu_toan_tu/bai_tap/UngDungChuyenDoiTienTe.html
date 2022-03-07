@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <tr>
+        <td><b>Amount</b></td>
+    </tr>
+
+    <br>
+    <input type="text" id="dauvao">
+    <tr>
+        <th><b>From Currency</b></th>
+    </tr>
+
+    <select name="select1" id="select1">
+        <option value="VND">VND</option>
+        <option value="USD">USD</option>
+    </select>
+
+    <tr>
+        <td><b>To Currency</b></td>
+    </tr>
+
+    <select name="select2" id="select2">
+        <option value="USD">USD</option>
+        <option value="VND">VND</option>
+    </select>
+
+<button onclick=chuyenDoiTienTe()>Convert</button>
+<p id="kq"></p>
+
+<script>
+    function chuyenDoiTienTe() {
+        document.getElementById('dauvao').value
+        let ketQua;
+        let giaTriVao = parseFloat(document.getElementById('dauvao').value);
+        let select1 = document.getElementById('select1').value;
+        let select2 = document.getElementById('select2').value;
+        if (select1 === 'VND' && select2 === 'USD') {
+            ketQua = giaTriVao / 23000;
+            document.getElementById('kq').innerHTML = "Result: " + ketQua + " USD";
+        }
+        if (select1 === 'USD' && select2 === 'VND') {
+            ketQua = giaTriVao * 23000;
+            document.getElementById('kq').innerHTML = "Result: " + ketQua + " VND";
+
+        }
+
+    }
+</script>
+
+</body>
+</html>

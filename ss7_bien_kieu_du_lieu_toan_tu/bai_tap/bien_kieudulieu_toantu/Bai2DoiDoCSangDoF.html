@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Chuyển độ 0C sang độ 0F</h2>
+<div>
+    <input type="number" id="doC" placeholder="nhập độ C">
+    <input type="button" value="Chuyển đổi" onclick="Chuyendoi()">
+</div>
+<script>
+    function Chuyendoi() {
+        let d =  document.getElementById("doC").value;
+        let chuyendoi = 9/5 * parseInt(d) + 32;
+        alert("chuyển đổi:" + chuyendoi);
+    }
+</script>
+</body>
+</html>
