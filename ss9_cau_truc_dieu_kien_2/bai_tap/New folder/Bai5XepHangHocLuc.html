@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let diemKiemtra = parseFloat(prompt('Điểm kiểm tra:'));
+    let diemGiuaKy = parseFloat(prompt('Điểm giữa kỳ: '));
+    let diemCuoiKy = parseFloat(prompt('Điểm cuối kỳ: '));
+
+    let avg = (diemKiemtra + (diemGiuaKy * 2) + (diemCuoiKy*3))/6;
+    if (avg > 8){
+        alert('Loại Giỏi');
+    }
+    else if (avg > 6){
+        alert('Loại Khá');
+    }
+    else{
+        alert('Loại Trung Bình');
+    }
+</script>
+
+</body>
+</html>
