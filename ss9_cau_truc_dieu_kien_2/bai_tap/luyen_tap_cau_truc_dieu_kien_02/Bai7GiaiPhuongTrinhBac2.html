@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = parseInt(prompt('Mời nhập số a: '));
+    let b = parseInt(prompt('Mời nhập số b: '));
+    let c = parseInt(prompt('Mời nhập số c: '));
+    let x = b*b - (4*a*c);
+
+    if (x>0){
+        alert(" Phương Trình Có 2 Nghiệm phân biệt là : x1 = " + ((-b - Math.sqrt(x))/(2*a)) + " và x2 = " + ((-b + Math.sqrt(x))/(2*a)));
+    }else if (x === 0){
+        alert(" Phương Trình Có 1 Nghiệm Kép là : x1 = x2 = " + (-b)/(2*a));
+    }else{
+        alert(" Phương Trình Vô Nghiệm ");
+    }
+
+</script>
+
+</body>
+</html>

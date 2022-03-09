@@ -1,0 +1,20 @@
+<!--Bài 12: Viết chương trình tính lãi ngân hàng -->
+<input type="number" id="e" placeholder="số tiền gửi">
+<input type="number" id="e1" placeholder="số tháng gửi">
+<input type="button" value="Tính tiền lãi" onclick="tinhlai()">
+<p id="tien"></p>
+<script>
+    function tinhlai() {
+        let e2 = parseFloat(document.getElementById("e").value);
+        let e3 = parseFloat(document.getElementById("e1").value);
+        let laisuat1 = 0.07;
+        let laisuat2 = 0.06;
+        if (e2<=1000000){
+            document.getElementById("tien").innerText=( e2*laisuat1/12*e3).toFixed(0);
+        } else {
+        document.getElementById("tien").innerText=( e2*laisuat2/12*e3).toFixed(0);
+        }
+    }
+</script>
+</body>
+</html>
