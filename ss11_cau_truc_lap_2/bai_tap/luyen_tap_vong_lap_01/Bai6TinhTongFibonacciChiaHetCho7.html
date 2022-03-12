@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính tổng của 30 số chia hết cho 7 đầu tiên</title>
+</head>
+<body>
+<script>
+
+    let tong = 0;
+    let demSoChiaHet7 = 0;
+    let n = 1;
+
+    while(true) {
+        if (n % 7 == 0) {
+            tong += n;
+            demSoChiaHet7++;
+            console.log(n);
+        }
+
+
+        if (demSoChiaHet7 === 20) {
+            break;
+        }
+        n++;
+    }
+
+    console.log(tong);
+</script>
+
+<!--Cách 2-->
+// let tong = 0;
+// let count = 0;
+// for (let a = 0; a <= 1000; a++) {
+//     if (a % 7 === 0) {
+//         console.log(a);
+//         tong += a;
+//         count++;
+//     }
+//     if (count === 30) {
+//         document.write(tong);
+//         break;
+//     }
+// }
+</body>
+</html>

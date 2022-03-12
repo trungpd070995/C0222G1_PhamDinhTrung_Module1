@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<!--    Bài 5: Tính tổng của 20 số đầu tiên trong dãy fibonacci.-->
+</head>
+<body>
+<script>
+    let a = 0;
+    let b = 1;
+    let i;
+    let c;
+    let tong = 0;
+    for (let i = 1; i <= 18; i++)
+    {
+        c = a + b;
+        a = b;
+        b = c;
+        tong += c;
+    }
+    document.write(tong);
+</script>
+    
+</body>
+</html>
