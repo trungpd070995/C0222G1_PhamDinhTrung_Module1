@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Viết chương trình khởi tạo mảng số nguyên gồm 10 phần tử khác nhau. -->
+    <!-- Chương trình hiển thị ra được phần tử có giá trị lớn nhất trong mảng và vị trí của phần tử đó. -->
+</head>
+<body>
+    <script>
+    let mangso = [];
+    let max = 0, vitri = 0;
+
+    for(let i=0 ;i<10; i++){
+        mangso[i] = parseInt(prompt("Nhập số vào mảng"));
+    }
+    document.write("mangso =  ["+ mangso +"]<br>");
+
+    for (let i=0; i<mangso.length; i++){
+        if( max < mangso[i] ){
+            max = mangso[i];
+            vitri = i;
+        }
+    }
+    document.write("Phần tử lớn nhất trong mảng là "+ max + " tại vị trí mangso["+vitri+"]");
+
+    </script>
+    
+</body>
+</html>

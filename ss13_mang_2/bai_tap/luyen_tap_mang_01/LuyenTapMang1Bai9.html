@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Viết chương trình khởi tạo/nhập vào 2 mảng số nguyên gồm 10 phần tử, gọi là mảng a và b.
+    Mảng c là một mảng được khai báo gồm 20 phần tử số nguyên.
+    Chương trình sẽ lưu các phần tử được nối từ hai mảng b và a vào mảng c. Hiển thị mảng c. -->
+
+</head>
+<body>
+<script>
+    let mangA = [], mangB = [], mangC = [];
+    for (let i = 0; i < 10; i++) {
+        let a = parseInt(prompt("Nhập số vào mảng 1"));
+        mangA.push(a)
+    }
+    for (let j = 0; j < 10; j++) {
+        let b= parseInt(prompt("Nhập số vào mảng 2"));
+        mangB.push(b)
+    }
+    document.write("Mảng 1 = ["+mangA+"] <br>")
+    document.write("Mảng 2 = ["+mangB+"] <br>")
+    mangC = mangA
+    for (let i=0; i<mangB.length ; i++){
+        mangC.push(mangB[i])
+    }
+    document.write("Mảng 3 = ["+mangC+"] <br>")
+</script>
+    
+</body>
+</html>

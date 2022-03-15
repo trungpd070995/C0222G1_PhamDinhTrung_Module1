@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <!-- Viết chương trình khởi tạo mảng số nguyên. Hiển hiện giá trị lớn nhất trong mảng đó. In ra giá trị trung bình của các phần tử trong mảng. -->
+
+</head>
+<body>
+<script>
+    let mangso = [];
+    let max = 0, vitri = 0, tongTb = 0;
+
+    for(let i=0 ;i<10; i++){
+        mangso[i] = parseInt(prompt("Nhập số vào mảng"));
+    }
+    document.write("Mảng số = ["+mangso+"]<br>");
+
+    for (let i=0; i<mangso.length; i++){
+        if(max< mangso[i]){
+            max = mangso[i];
+            vitri = i;
+        }
+        tongTb += mangso[i];
+    }
+    tongTb = tongTb/mangso.length;
+    
+    document.write("Phần tử lớn nhất trong mảng là "+ max + " tại vị trí thứ["+vitri+"]<br>");
+    document.write("Tổng trung bình của các số là "+tongTb);
+</script>
+    
+</body>
+</html>

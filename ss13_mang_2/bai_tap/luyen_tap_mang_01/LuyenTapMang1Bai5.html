@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Viết chương trình đếm số nguyên âm trong một chuỗi -->
+
+</head>
+<body>
+<script>
+    let mangSo = [],
+        mangSoAm = [];
+
+        for (let i = 0; i < 10; i++) {
+            mangSo[i] = parseInt(prompt("Nhập số vào mảng"));
+        if (mangSo[i]<0){
+            mangSoAm.push(mangSo[i]);
+        }
+    }
+    document.write(" Mảng số = ["+mangSo+"]<br>")
+    document.write(" Mảng các số âm gồm :" +mangSoAm.length + " phần tử mảng số âm = ["+mangSoAm+"]<br>")
+</script>
+    
+</body>
+</html>
