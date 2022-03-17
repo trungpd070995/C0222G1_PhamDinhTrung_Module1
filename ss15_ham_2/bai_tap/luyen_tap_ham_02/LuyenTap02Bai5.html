@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Bài 5: Viết hàm nhận vào 3 số nguyên bất kỳ, 
+    trả về số nguyên có giá trị nhỏ nhất. -->
+    
+</head>
+
+    <input type="button" value="Tìm số nguyên nhỏ nhất " onclick="bai5()"> <br>
+
+<body>
+<script>
+    
+    function timMin(mangso) {
+
+        let giaTri;
+
+        for (let i = 0; i < mangso.length; i++){
+            giaTri = mangso[0];
+            if ( mangso[i] < giaTri ){
+                giaTri = mangso[i];
+            }
+        }
+        return giaTri;
+    }
+
+    function bai5() {
+
+        let mangso = [] ;
+
+        for (let i=0 ; i<3; i++){
+
+            mangso.push(parseInt(prompt("Nhập vào mảng số thứ : " + i)));
+        }
+        let min = timMin(mangso);
+
+        document.write(" Mảng số gồm [" + mangso + "] <br>");
+        document.write(" Số nhỏ nhất trong mảng dãy số là : " + min);
+    }
+</script>   
+    
+</body>
+</html>

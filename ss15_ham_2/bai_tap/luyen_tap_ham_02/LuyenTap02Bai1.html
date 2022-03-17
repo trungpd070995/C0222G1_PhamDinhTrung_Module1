@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Bài 1: Viết hàm tính bình phương của một số bất kỳ được đưa vào. 
+    Gọi hàm vừa xây dựng được.     -->
+
+</head>
+<body>
+    
+    <input type="button" value="Tính bình phương" onclick="bai1()"><br>
+
+<script>
+
+    function binhphuong(so) {
+        return Math.pow(so,2)
+    }
+
+    function bai1() {
+        let so = Number(prompt("Nhập một số tính bình phương"));
+        let ketQua = binhphuong(so);
+        document.write("Bình phương của " + so + " = " + ketQua);
+    }
+    
+</script>    
+</body>
+</html>

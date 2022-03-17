@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Bài 3: Tạo hàm nhận vào hai tham số. 
+    Nếu giá trị của tham số thứ nhất lớn hơn tham số thứ hai, hiển thị hộp thoại thông báo cho người dùng. 
+    Nếu giá trị của tham số thứ nhất nhỏ hơn hoặc bằng tham số thứ hai, trả về tổng của hai tham số. -->
+
+</head>
+<body>
+    <input type="button" value="Bài 3 Tính tổng" onclick="bai3()">
+<script>
+    function tinhtong(a,b) {
+        if(a>b) {
+            return "Giá trị a > b xin nhập lại";
+        }
+        return a + b;
+    }
+
+    function bai3() {
+        let a = Number(prompt("Nhập số a"));
+        let b = Number(prompt("Nhập số b"));
+        document.write("Tổng của : " + a + " + " + b + " = " + tinhtong(a,b));
+    }
+</script>
+    
+</body>
+</html>

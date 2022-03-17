@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <!-- Bài 9: Viết hàm truyền vào một mảng ký tự, và một ký tự bất kỳ,
+    kiểm tra xem ký tự bất kỳ đó có nằm trong mảng không.
+    Nếu có trả về số lần xuất hiện của ký tự đó, nếu không trả về -1.  -->
+
+
+</head>
+    <input type="button" value="Kiểm tra ký tự trong mảng " onclick="bai9()"> <br>
+<body>
+
+<script>
+
+    function bai9() {
+
+        let mang = ['a','b','c','c','d','d','d','e','d','f']
+        let kytu = prompt("Nhập vào 1 ký tự bất kỳ")
+
+        document.write("Mảng gồm ["+mang+"]<br>");
+
+        let kiemtra = kiemTraTrongMang(kytu, mang)
+
+        if (kiemtra > 0){
+            document.write("Có "+kiemtra+" ký tự "+kytu+" trong mảng")
+        }else{
+            document.write("Không có dữ liệu trong mảng")
+        }
+    }
+
+    function kiemTraTrongMang(kytu, mang) {
+
+        let dem=0
+
+        for (let i=0; i<mang.length; i++){
+            if (kytu == mang[i]) {
+                dem++;
+            }
+        }
+        if(dem>0){
+            return dem;
+        }
+        return -1;
+    }
+</script>
+</body>
+</html>

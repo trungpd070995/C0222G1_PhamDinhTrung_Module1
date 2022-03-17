@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Bài 8: Viết hàm truyền vào mảng số nguyên bất kỳ, 
+    sau đó đảo ngược mảng số nguyên đó. -->
+
+</head>
+
+<input type="button" value=" Đổi chiều mảng " onclick="bai8()"><br>
+
+<body>
+<script>
+    function bai8() {
+        
+        let mangso = [1,2,3,4,5,6,7,8,9]
+        document.write("Mảng số gồm các số : ["+mangso+"]<br>");
+
+        let daoMang = daoMangSo(mangso)
+        document.write("Đổi chỗ các số trong mảng số :["+daoMang+"]");
+    }
+
+    function daoMangSo(mangso) {
+        return mangso.reverse();
+    }
+    
+</script>   
+</body>
+</html>

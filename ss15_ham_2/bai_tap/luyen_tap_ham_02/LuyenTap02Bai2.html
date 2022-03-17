@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Viết hàm tính diện tích, hàm tính chu vi hình tròn. 
+    Gọi hàm vừa xây dựng được -->
+
+</head>
+<body>
+    
+    <input type="button" value="Tính chu vi và diện tích hình tròn" onclick="bai2()">  <br>
+
+<script>
+
+    function dienTich(r) {
+        return Math.pow(r,2) * Math.PI ;
+    }
+    function chuVi(r) {
+        return 2 * r * Math.PI ;
+    }
+
+    function bai2() {
+
+        let r = Number(prompt("Nhập bán kính hình tròn "));
+        let chuvi = chuVi(r);
+        let dientich = dienTich(r);
+
+        document.write("Chu vi hình tròn là : " + chuvi.toFixed(2) + "cm" + "<br>");
+        document.write("Diện tích hình tròn là : "+ dientich.toFixed(2) + "m");
+    }
+
+
+</script>
+    
+</body>
+</html>

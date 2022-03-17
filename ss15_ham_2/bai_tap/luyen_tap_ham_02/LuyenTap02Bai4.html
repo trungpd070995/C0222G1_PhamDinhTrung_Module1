@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Bài 4: Viết hàm kiểm tra xem ký tự nhập vào có phải là ký tự số không. 
+    Nếu là ký tự số hàm trả về true, ngược lại trả về false. -->
+
+</head>
+    <input type="button" value="Kiểm tra" onclick="bai4()"> : ký tự nhập vào có phải là ký tự số không <br>
+<body>
+<script>
+    function kiemTraSoHayChuoi(i) {
+
+        return i % 2 === 0 || i % 2 === 1;
+    }
+
+    function bai4() {
+
+        let i = prompt("Nhập vào ký tự : ");
+        let check = kiemTraSoHayChuoi(i);
+        
+        if(check){
+            alert("True");
+        }else{
+            alert("False");
+        }
+    }
+    
+</script>
+</body>
+</html>

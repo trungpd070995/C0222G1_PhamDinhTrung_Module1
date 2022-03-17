@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luyện Tập 02 - Bài 7</title>
+
+    <!-- Bài 7: Viết hàm truyền vào 2 số nguyên bất kì, thực hiện đổi chỗ hai số nguyên đó. -->
+
+</head>
+<input type="button" value="Đổi chỗ 2 nguyên tố " onclick="bai7()"> <br>
+<body>
+<script>
+    function bai7() {
+
+        let so_a = prompt("Nhập số thứ nhất:")
+        let so_b = prompt("Nhập số thứ hai: ")
+        let ketqua = doiCho2So(so_a,so_b)
+
+        document.write("Đổi chỗ 2 số thành : " + ketqua[0] +" , " + ketqua[1]);
+    }
+    function doiCho2So(so_a, so_b) {
+
+        return [so_b, so_a];
+    }
+
+</script>
+    
+</body>
+</html>

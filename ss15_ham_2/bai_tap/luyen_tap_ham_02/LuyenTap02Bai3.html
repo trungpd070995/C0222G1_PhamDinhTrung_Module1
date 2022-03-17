@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Bài 3: Viết hàm tính giai thừa của một số nguyên bất kỳ được đưa vào. 
+    Gọi hàm vừa xây dựng được. -->
+
+</head>
+<body>
+
+<input type="button" value="Tính giai thừa " onclick="bai3()"> <br>
+
+<script>
+    function giaiThua(so) {
+        let giai_thua = 1;
+
+        if (so >= 1) {
+            for (let i = 1; i <= so; i++) {
+                giai_thua = giai_thua * i;
+            }
+        } else if (so === 0) {
+            giai_thua = 1;
+        } else {
+            return "Giai thừa không xác định được";
+        }
+        return giai_thua;
+    }
+
+    function bai3() {
+        let so = Number(prompt("Nhập vào một số tính giai thừa"));
+        let gt = giaiThua(so)
+        document.write("Giai thừa của " + so + " = " + gt);
+    }
+</script>
+</body>
+</html>
