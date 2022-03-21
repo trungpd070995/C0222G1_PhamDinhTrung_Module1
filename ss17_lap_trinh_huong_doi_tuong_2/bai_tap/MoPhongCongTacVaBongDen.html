@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phát triển chương trình thể hiện sự tương tác giữa hai đối tượng: công tắc và bóng đèn</title>
+</head>
+<body>
+<script>
+    class SwitchButton {
+        constructor(status, lamp) {
+            this.status = status;
+            this.lamp = lamp;
+        }
+
+        getStatus() {
+            return this.status;
+        }
+
+        setStatus(status) {
+            this.status = status;
+        }
+
+        getLamp() {
+            return this.lamp;
+        }
+
+        setLamp(lamp) {
+            this.lamp = lamp;
+        }
+
+        connectToLamp(electricLamp) {
+            this.lamp = electricLamp;
+        }
+
+        switchOff() {
+            this.status = false;
+            document.write("Đã tắt công tắt đèn" + "<br>");
+            this.lamp.turnOff();
+        }
+
+        switchOn() {
+            this.status = true;
+            document.write("Đã bật công tắt đèn" + "<br>");
+            this.lamp.turnOn();
+        }
+    }
+    class ElectricLamp {
+        constructor(status) {
+            this.status = status;
+        }
+
+        getStatus() {
+            return this.status;
+        }
+
+        setStatus() {
+            this.status = status;
+        }
+
+        turnOn() {
+            this.status = true;
+            document.write("Đèn đã được bật" + "<br>");
+        }
+
+        turnOff() {
+            this.status = false;
+            document.write("Đèn đã tắt" + "<br>");
+        }
+    }
+    let lamp = new ElectricLamp (false);
+    let switchButton = new SwitchButton(false);
+    switchButton.connectToLamp(lamp);
+    document.write("Công tắc đèn sau khi được nhấn lần thứ nhất: " + switchButton.status + "<br>");
+    document.write("Đèn sau khi nhấn công tắt lần thứ nhất: " + switchButton.status + "<br>");
+    switchButton.switchOn();
+    document.write("Công tắc đèn sau khi được nhấn lần hai: " + switchButton.status + "<br>");
+    document.write("Đèn sau khi nhấn công tắt lần thứ hai: " + switchButton.status + "<br>");
+</script>
+</body>
+</html>

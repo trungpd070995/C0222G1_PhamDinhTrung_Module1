@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mô phỏng quá trình mèo bắt chuột và ăn chuột</title>
+</head>
+<body>
+<script>
+    class Rat {
+        constructor(name, weight, speed, status) {
+            this.name = name;
+            this.weight = weight;
+            this.speed = speed;
+            this.status = status;
+        }
+
+        getName() {
+        }
+
+        setName(name) {
+            this.name = name;
+        }
+
+        getWeight() {
+            return this.weight;
+        }
+
+        setWeight(weight) {
+        }
+
+        getSpeed() {
+            return this.speed;
+        }
+
+        setSpeed(speed) {
+            this.speed = speed;
+        }
+
+        getStatus() {
+        }
+
+        setStatus(status) {
+            this.status= status;
+        }
+        say() {
+            document.write("Chít chít");
+        }
+    }
+
+    class Cat {
+        constructor(name, weight, speed) {
+            this.name = name;
+            this.weight = weight;
+            this.speed = speed;
+        }
+
+        getName() {
+        }
+
+        setName(name) {
+            this.name = name;
+        }
+
+        getWeight() {
+            return this.weight;
+        }
+
+        setWeight(weight) {
+        }
+
+        getSpeed() {
+            return this.speed;
+        }
+
+        setSpeed(speed) {
+            this.speed = speed;
+        }
+
+        say() {
+            document.write("Meo meo");
+        }
+
+        catch(rat) {
+            if (this.speed > rat.speed) {
+                document.write("Đã bắt được chuột !");
+                document.write("<br>");
+            } else {
+                document.write("Không bắt được chuột");
+            }
+        }
+
+        eat(rat) {
+            if (rat.status) {
+                this.weight += rat.weight;
+                rat.status = false;
+                document.write("Đã ăn xong !");
+                document.write("<br>");
+            } else {
+                document.write("Chuột đã chết, không ăn");
+                document.write("<br>");
+            }
+        }
+    }
+    let jerry = new Rat("Jerry", 50, 60, true);
+    let tom = new Cat("Tom", 40, 55);
+    tom.say();
+    document.write("<br>");
+    jerry.say();
+    document.write("<br>");
+    tom.catch(jerry);
+    document.write("<br>");
+    document.write("Tăng tốc độ của Tom" + "<br>");
+    tom.setSpeed(65);
+    tom.catch(jerry);
+    document.write("Khối lượng ban đầu của Tom: " + tom.getWeight());
+    document.write("<br>");
+    document.write("Khối lượng ban đầu của Jerry: " + jerry.getWeight());
+    document.write("<br>");
+    tom.eat(jerry);
+    document.write("Khối lượng của Tom sau khi ăn Jerry: " + tom.getWeight());
+    document.write("<br>");
+</script>
+</body>
+</html>
